@@ -19,17 +19,22 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   flex-direction: column;
   background-color: var(--Light-grayish-cyan);
   gap: 4rem;
+}
+
+main {
+  text-align: center;
 }
 
 .title {
   color: var(--Very-dark-cyan);
   text-transform: uppercase;
   letter-spacing: 3px;
+  margin-bottom: 16px;
 }
 
 .card {
@@ -70,6 +75,7 @@ body {
 }
 
 label {
+  display: flex;
   color: var(--Very-dark-cyan);
   font-size: 14px;
 }
@@ -85,6 +91,7 @@ label {
   text-align: right;
   padding: 0.5rem;
   border: none;
+  border-radius: 0.5rem;
   font-size: 1.2rem;
   color: var(--Very-dark-cyan);
   background-color: var(--Very-light-grayish-cyan);
@@ -165,6 +172,7 @@ label {
 .total span {
   font-size: 12px;
   color: var(--Grayish-cyan);
+  display: flex;
 }
 
 .reset-btn {
@@ -186,9 +194,7 @@ label {
 
 @media screen and (max-width: 750px) {
   body {
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 2rem;
+    place-items: center;
     gap: 0;
   }
 
@@ -221,8 +227,7 @@ label {
   }
 
   .tip-btns div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1rem;
   }
 }
